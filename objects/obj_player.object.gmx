@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>/// Move the player
 // Move Right
-if(
+if(keyboard_check(vk_right)) {
+
+}
 </string>
           </argument>
         </arguments>
