@@ -54,6 +54,10 @@ spd = 2;
 if(keyboard_check(vk_right)) {
     x += spd;
 }
+// Move Left
+if(keyboard_check(vk_left)) {
+    x -= spd;
+}
 </string>
           </argument>
         </arguments>
