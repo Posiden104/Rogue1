@@ -13,20 +13,43 @@
       <sprite>sprites\spr_player_down</sprite>
       <sprite>sprites\spr_player_right</sprite>
       <sprite>sprites\spr_player_left</sprite>
+      <sprite>sprites\spr_player_attack_right</sprite>
+      <sprite>sprites\spr_player_attack_left</sprite>
+      <sprite>sprites\spr_player_attack_up</sprite>
+      <sprite>sprites\spr_player_attack_down</sprite>
       <sprite>sprites\spr_player_shadow</sprite>
       <sprite>sprites\spr_player</sprite>
     </sprites>
+<<<<<<< HEAD
     <sprite>sprites\spr_slime</sprite>
+=======
+    <sprite>sprites\spr_damage</sprite>
+>>>>>>> 47751ea125ef00ec2d4a13a4dbecb9bd708efe7d
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_get_input.gml</script>
-    <script>scripts\scr_move_state.gml</script>
-    <script>scripts\scr_dash_state.gml</script>
-    <script>scripts\scr_frozen_state.gml</script>
+    <scripts name="Player State">
+      <script>scripts\scr_attack_state.gml</script>
+      <script>scripts\scr_frozen_state.gml</script>
+      <script>scripts\scr_dash_state.gml</script>
+      <script>scripts\scr_move_state.gml</script>
+    </scripts>
+    <scripts name="Helper Scripts">
+      <script>scripts\scr_get_face.gml</script>
+      <script>scripts\scr_get_input.gml</script>
+    </scripts>
+    <scripts name="Enemy State">
+      <scripts name="Enemy Helper Scripts">
+        <script>scripts\scr_enemy_choose_next_state.gml</script>
+        <script>scripts\scr_check_for_player.gml</script>
+      </scripts>
+      <script>scripts\scr_enemy_idle_state.gml</script>
+      <script>scripts\scr_enemy_wander_state.gml</script>
+      <script>scripts\scr_enemy_chase_state.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -35,6 +58,7 @@
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_enemy_slime</object>
     <object>objects\obj_lifeform_parent</object>
+    <object>objects\obj_damage</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>
